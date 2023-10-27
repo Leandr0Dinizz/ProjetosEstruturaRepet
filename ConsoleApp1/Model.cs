@@ -15,12 +15,18 @@ namespace ConsoleApp1
         private double soma;
         public int[] vet3;
         public double[] vet4;
+        public int[] vet15;
+        public double[] vet16;
+        public double[] maior7;
         public Model()
         {
             notas = new double[10];
             vetor = new int[5];//INSTANCIAR == EXISTIR
             vet3  =  new int[10];
             vet4 = new double[20];
+            vet15 = new int[15];
+            vet16 = new double[25];
+            maior7 = new double[25];
             i = 0;
             ConsultarSoma = 0;
         }//Fim do construtor
@@ -77,7 +83,7 @@ namespace ConsoleApp1
 
         }//Fim do mostrar
 
-        //Exercicio 3 - 2 Ler um vetor de 10 elementos e mostre apenas os números pares.
+        //Exercicio 2 - 2 Ler um vetor de 10 elementos e mostre apenas os números pares.
 
         public void PreencherVet3()
         {
@@ -100,45 +106,107 @@ namespace ConsoleApp1
             }
         }//Fim mostrar vet
 
-        public void MediaValores()
+
+
+       // EX3- MEDIA VALORES   
+        public double MediaValores()
         {
-
-            for (i=0; i < 20; i++)
+            for (i = 0; i < 20; i++)
             {
-
                 do
                 {
-
                     Console.WriteLine(i + 1 + "ª Posição: ");
-                    notas[i] = Convert.ToDouble(Console.ReadLine());
+                    vet4[i] = Convert.ToDouble(Console.ReadLine());
                     if ((vet4[i] < 0) || (vet4[i] > 20))
                     {
 
-                        Console.WriteLine("Digite uma valor entre 0 e 20");
-                    }
+                        Console.WriteLine("Digite um número válido");
 
-                } while ((vet4[i] > 0 || vet4[i] < 20));
+                    }//fim validação
+                } while ((vet4[i] < 0) || (vet4[i] > 20));
+                ConsultarSoma += vet4[i];
             }//Fim do for
-
-
+            return ConsultarSoma / i;
         }//Fim do método
 
+        public void PreencherValores()
+        {
+            for (i=0; i < 20; i++)
+            {
+
+
+            }//fim for
+         
+        }//Fim do método
+
+     //EX 4 - NUMEROS PARES      
+        public void PreencherVet15()
+        {
+
+            for (i = 0; i < 15; i++)
+            {
+
+                Console.WriteLine(i + 1 + " ªPosição ");
+                vet15[i] = Convert.ToInt32(Console.ReadLine());
+               
+            }//Fim do for
+        }//Fim do método preencher15
+
+        public void MostrarVet15()
+        {
+
+            for (i = 0; i < 15; i++)
+            if ((vet15[i] % 2) ==0)
+            {
+                    
+                    Console.WriteLine(" O valor : " + vet15[i] + " é par");
+
+            }//fim do for
+
+        }//fim do método
+
+        //EX 5 25 ELEMENTOS MOSTRE MAIOR VALOR E POSIÇAO
+        public void PreencherElementos()
+        {
+
+            for (i=0; i<25 ; i++)
+            {
+
+                Console.WriteLine(i+1 + " ºelemento ");
+                vet16[i] = Convert.ToInt32(Console.ReadLine());           
+            }//fim do for
+
+        }// fim public
+
+        public void MaiorElemento()
+        {
+
+            for (i=0; i<25; i++)
+            {
+
+                Console.WriteLine(i+1 + "Valor");
+                vet16[i] = Convert.ToDouble(Console.ReadLine());
+                maior7 =
+                for (i=0; i<25; i++)
+                {
+
+                    Console.WriteLine(i+1 +" Valor ");
+                    vet16[i] = Convert.ToDouble(Console.ReadLine());
+
+
+                }
 
 
 
+            }
 
 
 
+        }
+        
 
 
-
-
-
-
-
-
-
-
+                 
         public bool Validar(double num)
         {
 

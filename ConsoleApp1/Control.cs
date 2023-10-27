@@ -42,8 +42,8 @@ namespace ConsoleApp1
                              "2. Vetor inverso\n"                    +
                              "3. Números páres\n"                    +
                              "4. Média Valores\n"                    +
-                             "5. Vetor inverso\n"                    +
-                             "6. Vetor inverso\n"                    +
+                             "5. quantidade pares\n"                 +
+                             "6. 25 elementos  \n"                    +
                              "7. Vetor inverso\n"                    +
                              "8. Vetor inverso\n"                    + 
                              "9. Vetor inverso\n");
@@ -76,9 +76,19 @@ namespace ConsoleApp1
                         this.modelo.MostrarVet3();
                     break;
                     case 4:
+                        this.modelo.PreencherValores();  
                         this.modelo.MediaValores();
-                        this.modelo.
                      break;
+                        case 5:
+                        this.modelo.PreencherVet15();
+                        this.modelo.MostrarVet15();
+                     break;
+                        case 6:
+                        this.modelo.PreencherElementos();
+
+                        break;
+
+
 
 
                     default:
